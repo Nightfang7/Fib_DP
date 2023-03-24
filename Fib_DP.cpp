@@ -17,9 +17,6 @@ int Fib_DP(int n){
 }
 
 int main(){
-    // cout << "輸入數字:";
-    // int n;
-    // cin >> n ;
     for(int i=0;i<=10;i++){
         cout << Fib_DP(i) <<endl;
     }
