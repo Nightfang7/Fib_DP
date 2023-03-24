@@ -5,22 +5,17 @@ using namespace std;
 int Fib_DP(int n){
     if(n==0 || n==1)
         return n;
-    int *F = (int *) malloc((n+1) * sizeof(int));
+    int *F = (int *) malloc((n) * sizeof(int));
     F[0] = 0;
     F[1]= 1;
     for(int i=2;i<=n;i++){
         F[i]=F[i-1]+F[i-2];
     }
-    int Ans = F[n];
-    free(F);
-    return Ans;
+    return F[n];        //suh: after you finish your function, you did not remove the allocated memory
 }
 
 int main(){
-    // cout << "輸入數字:";
-    // int n;
-    // cin >> n ;
-    for(int i=0;i<=10;i++){
+    for(int i=0;i<=10;i++){     //suh: basically, lines 11-12 are for these 2 lines
         cout << Fib_DP(i) <<endl;
     }
 }
